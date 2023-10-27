@@ -1,0 +1,22 @@
+def calculate_area(length, width):
+    if length == width:
+        return "This is a square!"
+    else:
+        return length * width
+
+# Input values from the user
+length = input("Enter the length: ")
+width = input("Enter the width: ")
+
+if length.isnumeric() and width.isnumeric():
+    length = float(length)
+    width = float(width)
+
+    result = calculate_area(length, width)
+
+    if type(result) == str:
+        print(result)
+    else:
+        print(f"The area of the rectangle is: {result}")
+else:
+    print("Invalid input. Please enter numeric values for length and width.")
